@@ -12,3 +12,6 @@ POP_SIZE = 100 # population count
 GENS = 50 # no. of generations
 MUTPB = 0.01 # mutation probability
 CXPB = 0.7 # crossing probability
+
+creator.create("FitnessMax", base.Fitness, weights=(1.0,)) # fitness class
+creator.create("Individual", list, fitness=creator.FitnessMax) # individual class
