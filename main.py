@@ -1,4 +1,6 @@
 import numpy as np
+import random
+from deap import base, creator, tools
 
 def func(x):
     return (pow(np.exp(), x) * np.sin(np.pi * x) + 1) / x
