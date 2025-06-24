@@ -5,3 +5,8 @@ def func(x):
 
 # range is (0.500, 2.500) so no if x = 0 needed
 
+BOUNDS = (0.500, 2.500) # range where the func(x) will be optimized
+POP_SIZE = 100 # population count
+GENS = 50 # no. of generations
+MUTPB = 0.01 # mutation probability
+CXPB = 0.7 # crossing probability
