@@ -15,3 +15,7 @@ CXPB = 0.7 # crossing probability
 
 creator.create("FitnessMax", base.Fitness, weights=(1.0,)) # fitness class
 creator.create("Individual", list, fitness=creator.FitnessMax) # individual class
+
+toolbox = base.Toolbox()
+
+toolbox.register("attr_float", random.uniform, 0.5, 2.5) # registering random function
