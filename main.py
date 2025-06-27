@@ -3,7 +3,7 @@ import random
 from deap import base, creator, tools
 
 def func(x):
-    return (pow(np.exp(), x) * np.sin(np.pi * x) + 1) / x
+    return (np.exp(x) * np.sin(np.pi * x) + 1) / x
 
 # range is (0.500, 2.500) so no if x = 0 needed
 
@@ -24,4 +24,4 @@ toolbox.register("population", tools.initRepeat, list, toolbox.individual) # reg
 
 def evaluate(individual):
     x = individual[0]
-    return (np.exp(x) * np.sin(np.pi * x) + 1) / x
+    return (np.exp(x) * np.sin(np.pi * x) + 1) / x,
