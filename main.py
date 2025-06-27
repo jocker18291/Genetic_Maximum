@@ -21,3 +21,7 @@ toolbox = base.Toolbox()
 toolbox.register("attr_float", random.uniform, 0.5, 2.5) # registering random function
 toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.attr_float, 1) # register individual
 toolbox.register("population", tools.initRepeat, list, toolbox.individual) # register population
+
+def evaluate(individual):
+    x = individual[0]
+    return (np.exp(x) * np.sin(np.pi * x) + 1) / x
