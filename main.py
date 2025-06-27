@@ -25,3 +25,9 @@ toolbox.register("population", tools.initRepeat, list, toolbox.individual) # reg
 def evaluate(individual):
     x = individual[0]
     return (np.exp(x) * np.sin(np.pi * x) + 1) / x,
+
+toolbox.register("evaluate", evaluate)
+
+toolbox.register("mate", tools.cxBlend, alpha=0.7)
+toolbox.register("mutate", tools.mutGaussian, mu=0, sigma=0.1, indpb=0.01)
+toolbox.register("select", tools.selTournament, tournsize=3)
