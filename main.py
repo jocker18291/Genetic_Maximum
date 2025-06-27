@@ -19,3 +19,5 @@ creator.create("Individual", list, fitness=creator.FitnessMax) # individual clas
 toolbox = base.Toolbox()
 
 toolbox.register("attr_float", random.uniform, 0.5, 2.5) # registering random function
+toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.attr_float, 1) # register individual
+toolbox.register("population", tools.initRepeat, list, toolbox.individual) # register population
