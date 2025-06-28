@@ -35,5 +35,6 @@ toolbox.register("select", tools.selTournament, tournsize=3)
 def main():
     population = toolbox.population(n=POP_SIZE)
 
+    # evaluate the entire population
     for ind in population:
         ind.fitness.value = toolbox.evaluate(ind)
